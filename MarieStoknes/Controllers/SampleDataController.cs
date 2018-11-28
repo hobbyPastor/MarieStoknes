@@ -26,26 +26,6 @@ namespace MarieStoknes.Controllers
             });
         }
 
-        public class WeatherForecast
-        {
-            public string DateFormatted { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-
-            public int TemperatureF
-            {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
-        }
-        public class QuestionResult
-        {
-            public string Answer { get; set; }
-            public string Hint { get; set; }
-        }
-
         [HttpGet("[action]/{answer}")]
         public QuestionResult NextTip(string answer)
         {
@@ -65,6 +45,26 @@ namespace MarieStoknes.Controllers
             else qRes.Hint = "Dette stemmer ikke!";
 
             return qRes;
+        }
+
+        public class WeatherForecast
+        {
+            public string DateFormatted { get; set; }
+            public int TemperatureC { get; set; }
+            public string Summary { get; set; }
+
+            public int TemperatureF
+            {
+                get
+                {
+                    return 32 + (int)(TemperatureC / 0.5556);
+                }
+            }
+        }
+        public class QuestionResult
+        {
+            public string Answer { get; set; }
+            public string Hint { get; set; }
         }
     }
 }

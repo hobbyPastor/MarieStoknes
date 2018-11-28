@@ -21,15 +21,6 @@ export class FetchDataComponent {
       this.forecasts = result;
     }, error => console.error(error));
   }
-
-
-
-  public sendAnswer() {
-    console.log(this.currentFeedback);
-    this.http.get<questionResult>(this.baseUrl + 'api/SampleData/NextTip/' + this.answer).subscribe(result => {
-      this.currentFeedback = result.hint;
-    }, error => console.error(error));
-  }
 }
 
 interface WeatherForecast {
@@ -37,9 +28,4 @@ interface WeatherForecast {
   temperatureC: number;
   temperatureF: number;
   summary: string;
-}
-
-interface questionResult {
-  answer: string;
-  hint: string;
 }

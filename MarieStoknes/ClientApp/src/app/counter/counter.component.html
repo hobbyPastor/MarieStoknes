@@ -1,4 +1,9 @@
-<h1>Counter</h1>
+<h1>Oppgaver:</h1>
 
-<p>This is a simple example of an Angular component.</p>
+<p>Velkommen til oppgavesiden, her får du et nytt hint når du har funnet et svar </p>
 
+<p>Ditt nye hint: {{ currentFeedback }}</p>
+
+<p>Svar: <input [(ngModel)]="answer"></p>
+
+<button (click)="sendAnswer()">Send</button>
