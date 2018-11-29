@@ -1,9 +1,25 @@
-<h1>Oppgaver:</h1>
+<mat-card>
+  <mat-card-title>
+    <h1>Oppgaver:</h1>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <p>Velkommen til oppgavesiden, her får du et nytt hint når du har funnet et svar </p>
+  </mat-card-subtitle>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-content>
+    <p>Ditt nye hint: {{ currentFeedback }}</p>
+  </mat-card-content>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-actions>
+    <mat-form-field class="example-full-width">
+      <textarea matInput [(ngModel)]="answer" placeholder="Svar:"></textarea>
+    </mat-form-field>
 
-<p>Velkommen til oppgavesiden, her får du et nytt hint når du har funnet et svar </p>
+    <button mat-button (click)="sendAnswer()">Send</button>
+  </mat-card-actions>
+</mat-card>
 
-<p>Ditt nye hint: {{ currentFeedback }}</p>
-
-<p>Svar: <input [(ngModel)]="answer"></p>
-
-<button (click)="sendAnswer()">Send</button>

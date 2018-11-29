@@ -17,8 +17,12 @@ export class CounterComponent {
   }
 
   public sendAnswer() {
+    var param = this.answer;
+    if (param == '') {
+      param = 'Feil svar';
+    }
     console.log(this.currentFeedback);
-    this.http.get<questionResult>(this.baseUrl + 'api/SampleData/NextTip/' + this.answer).subscribe(result => {
+    this.http.get<questionResult>(this.baseUrl + 'api/SampleData/NextTip/' + param).subscribe(result => {
       this.currentFeedback = result.hint;
     }, error => console.error(error));
   }

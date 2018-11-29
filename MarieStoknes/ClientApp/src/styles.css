@@ -1,0 +1,30 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+P {
+  font-style: normal;
+  text-align: center;
+}
+
+H2 {
+  text-align: center;
+}
+H1 {
+
+  text-align: center;
+}
+
+mat-card-actions {
+  text-align: center;
+}
+
+img {
+  align-items: center;
+}
+mat-card {
+  display: flex;
+  position: absolute;
+  align-content: center;
+}
+.countdown {
+  font-style: normal;
+  font-size: x-large;
+}
