@@ -10,7 +10,8 @@ export class CounterComponent {
 
   public answer: string = '';
   public currentFeedback: string = "";
-  public baseUrl;
+  public correctAnswer: boolean = false;
+  public baseUrl: string;
 
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.baseUrl = baseUrl;
@@ -24,11 +25,16 @@ export class CounterComponent {
     console.log(this.currentFeedback);
     this.http.get<questionResult>(this.baseUrl + 'api/SampleData/NextTip/' + param).subscribe(result => {
       this.currentFeedback = result.hint;
-    }, error => console.error(error));
+      this.correctAnswer = result.correctAnswer;
+      console.log(result.correctAnswer)
+    }, error => {
+      console.error(error)
+    });
   }
 }
 
 interface questionResult {
   answer: string;
   hint: string;
+  correctAnswer: boolean;
 }

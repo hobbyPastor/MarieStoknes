@@ -1,4 +1,5 @@
-<mat-card class="mat-card-class">
+<br />
+<mat-card style="background-color:#4189C7" class="mat-card-class">
   <mat-card-title>
     <h1>
       {{title}}
@@ -6,14 +7,14 @@
   </mat-card-title>
   <br />
   <mat-card-content>
-    <p><countdown-timer class="countdown" (zeroTrigger)="itsTime()" [end]="'2018-12-01 08:00:00'"></countdown-timer></p>
+    <p><countdown-timer class="countdown" (zeroTrigger)="itsTime()" [end]="'2018-12-01 09:00:00'"></countdown-timer></p>
   </mat-card-content>
 </mat-card>
 
   <br />
-  <mat-card class="mat-card-class" *ngIf="happyBirthday">
+  <mat-card style="background-color:#4189C7" class="mat-card-class" *ngIf="happyBirthday">
     <mat-card-content>
       <img mat-card-image src="https://pa1.narvii.com/6861/818a4403db681a1f7efddc5386b1203d1e01580fr1-555-555_hq.gif" />
-      <div class="birthdayMessage"><h4>Er ikke dette morsommere enn et kort? I år er gaven din gjemt bak en lek. Den finner du på menyen. Her har du første hint: <code>Hvor mange etasjer har Risvollan-blokka?</code> Lykke til!</h4></div>
+      <div class="birthdayMessage"><h4>Det blir en app istedet for et kort i år. Gaven din har jeg gjemt bak en liten Reise quiz. Den finner du på menyen. Håper du har en suveren dag og at du klarer å finne skatten. Her har du første hint: <code>Hipp hipp ....</code> Lykke til!</h4></div>
     </mat-card-content>
   </mat-card>

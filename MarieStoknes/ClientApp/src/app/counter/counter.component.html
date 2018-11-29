@@ -1,25 +1,39 @@
-<mat-card>
+<br />
+<mat-card style="background-color:#4189C7">
   <mat-card-title>
-    <h1>Oppgaver:</h1>
+    <h1>Reise Quiz</h1>
   </mat-card-title>
   <mat-card-subtitle>
-    <p>Velkommen til oppgavesiden, her får du et nytt hint når du har funnet et svar </p>
+    <p>Velkommen til Reisequizen, her får du et nytt hint når du har funnet et svar!</p>
   </mat-card-subtitle>
 </mat-card>
 <br />
-<mat-card>
+<mat-card style="background-color:#4189C7">
   <mat-card-content>
-    <p>Ditt nye hint: {{ currentFeedback }}</p>
+    <p><strong>Ditt nye hint:</strong> {{ currentFeedback }}</p>
   </mat-card-content>
 </mat-card>
 <br />
-<mat-card>
+<mat-card style="background-color:#4189C7">
   <mat-card-actions>
     <mat-form-field class="example-full-width">
       <textarea matInput [(ngModel)]="answer" placeholder="Svar:"></textarea>
     </mat-form-field>
 
-    <button mat-button (click)="sendAnswer()">Send</button>
+    <button mat-button style="background-color:#db6060" (click)="sendAnswer()">Send</button>
   </mat-card-actions>
 </mat-card>
+
+<br />
+<mat-card style="background-color:red" *ngIf="!correctAnswer && currentFeedback">
+  <mat-card-title>
+    <h2>Feil svar!</h2>
+  </mat-card-title>
+</mat-card>
+<mat-card style="background-color:lightgreen" *ngIf="correctAnswer && currentFeedback">
+  <mat-card-title>
+    <h2>Korrekt!</h2>
+  </mat-card-title>
+</mat-card>
+
 

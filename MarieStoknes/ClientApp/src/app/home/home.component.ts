@@ -5,12 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  public title: string = "Tid igjen til Bursdagskickoff!";
+  public title: string = "Tid igjen til Bursdagskickoff:";
   public happyBirthday: boolean = false;
 
   public itsTime() {
     this.happyBirthday = true;
-    this.title = "Gratulerer så masse med dagen Marie."
+    this.title = "Gratulerer så masse med dagen Marie ❤️"
   }
 
 }
